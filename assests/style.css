@@ -1,0 +1,15 @@
+@font-face{
+  font-family: "digital-7";
+  src: url(assests/digital-7.ttf);
+}
+
+*{
+  box-sizing: border-box;
+  font-family: "digital-7";
+  outline: auto;
+}
+
+body{
+  margin: 0;
+  height: fit-content;
+}

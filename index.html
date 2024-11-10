@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assests/style.css">
   <title>ToDo</title>
 </head>
 
@@ -13,9 +13,9 @@
     <h1> Welcome to ToDo</h1>
     <h2>hii.. <span id="user-name">{{name}}</span></h2>
     <div class="date">
-      <span>12</span>
-      <span>jan</span>
-      <span>2020</span>
+      <span class="Date-parts-number">12</span>
+      <span class="Date-parts-month">jan</span>
+      <span class="Date-parts-year">2020</span>
     </div>
   </header>
   <nav class="todo-nav">
@@ -26,7 +26,7 @@
       <li class="switch4">profile</li>
     </ul>
   </nav>
-  <main class="todo-header">
+  <main class="todo-main">
     <section class="taskSection">
       <button class="creates-task">create task</button>
     </section>
@@ -41,9 +41,9 @@
           <span class="digit5">0</span>
         </div>
         <div class="buttons">
-          <button class="timer-button1">play</button>
-          <button class="timer-button2">pause</button>
-          <button class="timer-button3">stop</button>
+          <button class="timer-button1" onclick="play()">play</button>
+          <button class="timer-button2" onclick="pause()">pause</button>
+          <button class="timer-button3" onclick="Stop()">stop</button>
         </div>
         <p>Focus on your work</p>
       </div>
@@ -79,6 +79,7 @@
       </fieldset>
     </section>
   </main>
+  <script src="assests/javascript.js"></script>
 </body>
 
 </html>
