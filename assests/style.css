@@ -1,15 +1,26 @@
-@font-face{
+@font-face {
   font-family: "digital-7";
-  src: url(assests/digital-7.ttf);
+  src: url(assests/digital-7.ttf) format("truetype");
 }
 
-*{
+* {
   box-sizing: border-box;
   font-family: "digital-7";
-  outline: auto;
+  outline: .1rem solid black;
 }
 
-body{
+body {
   margin: 0;
   height: fit-content;
+}
+
+
+.signforms {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
 }
