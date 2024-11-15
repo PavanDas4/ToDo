@@ -1,12 +1,3 @@
-// sign in and sign up form
-let signforms = document.querySelector(".signforms");
-let menu = document.querySelector("#menu");
-menu.addEventListener("focus", () => {
-  signforms.style.display = "block";
-});
-
-
-
 
 // current date update
 let date = new Date();

@@ -5,22 +5,10 @@
 
 * {
   box-sizing: border-box;
-  font-family: "digital-7";
   outline: .1rem solid black;
 }
 
 body {
   margin: 0;
   height: fit-content;
-}
-
-
-.signforms {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
 }
