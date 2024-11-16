@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Panel</title>
-  <link rel="stylesheet" href="assests/style.css">
+  <link rel="stylesheet" href="assests/admin-style.css">
 </head>
 
 <body>
+  <div class="loader-wrap">
+    <span class="loader"></span>
+  </div>
   <header class="admin-header">
-    <h1>ToDo</h1>
+    <h1>todo application</h1>
     <h2>admin Panel</h2>
   </header>
   <nav class="admin-nav">
@@ -23,34 +26,39 @@
     </ul>
   </nav>
   <main class="admin-main">
-    <div class="panel-wrap">
+    <section class="panel-wrap">
       <div class="button1">
-        <span>logo</span>
-        <span>153</span>
-        <span>users</span>
+        <span><img src="images/file.svg" alt="tasks"></span>
+        <span>{{000}}</span>
+        <span>todays tasks</span>
       </div>
       <div class="button2">
-        <span>logo</span>
-        <span>153</span>
-        <span>users</span>
+        <span><img src="images/done.svg" alt=""></span>
+        <span>{{000}}</span>
+        <span>todays completed tasks</span>
       </div>
       <div class="button3">
-        <span>logo</span>
-        <span>153</span>
-        <span>users</span>
+        <span><img src="images/focus.svg" alt=""></span>
+        <span>{{000}}</span>
+        <span>todays focus</span>
       </div>
       <div class="button4">
-        <span>logo</span>
-        <span>153</span>
-        <span>users</span>
+        <span><img src="images/profiles.svg" alt=""></span>
+        <span>{{000}}</span>
+        <span>total users</span>
       </div>
       <div class="button5">
-        <span>logo</span>
-        <span>153</span>
-        <span>users</span>
+        <span><img src="images/active.svg" alt=""></span>
+        <span>{{000}}</span>
+        <span>active users</span>
       </div>
-    </div>
+    </section>
     <section class="admin-controls">
+      <div class="admin-assign-task">
+        <h3>assign task</h3>
+        <div class="list"></div>
+        <button>read more</button>
+      </div>
       <div class="users-progress">
         <h3>progress bar</h3>
         <label for="user-today">today</label>
@@ -66,12 +74,28 @@
         <progress id="user-year" value="50" max="100">
         </progress>
       </div>
-      <div class="admin-assign-task">
-        <h3>assign task</h3>
-        <button>read more</button>
-      </div>
       <div class="feeds">
         <h3>user feedback</h3>
+        <div class="list">
+          <dl>
+            <dt>user name</dt>
+            <dd>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia sint doloremque, culpa eligendi laboriosam amet, enim facilis, fuga debitis nihil porro repellendus natus veniam est nostrum quae ad alias modi.
+            </dd>
+          </dl>
+          <dl>
+            <dt>user name</dt>
+            <dd>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia sint doloremque, culpa eligendi laboriosam amet, enim facilis, fuga debitis nihil porro repellendus natus veniam est nostrum quae ad alias modi.
+            </dd>
+          </dl>
+          <dl>
+            <dt>user name</dt>
+            <dd>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia sint doloremque, culpa eligendi laboriosam amet, enim facilis, fuga debitis nihil porro repellendus natus veniam est nostrum quae ad alias modi.
+            </dd>
+          </dl>
+        </div>
         <button>read more</button>
       </div>
     </section>
@@ -80,7 +104,7 @@
     <p>Copyright © 2024. All rights reserved.</p>
     <p>Designed by <a href="http://www.github.com/PavanDas4">Pavan Das</a></p>
   </footer>
-  <script src="assests/javascript.js"></script>
+  <script src="assests/adminJs.js"></script>
 </body>
 
 </html>

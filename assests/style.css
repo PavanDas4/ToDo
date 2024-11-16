@@ -2,13 +2,3 @@
   font-family: "digital-7";
   src: url(assests/digital-7.ttf) format("truetype");
 }
-
-* {
-  box-sizing: border-box;
-  outline: .1rem solid black;
-}
-
-body {
-  margin: 0;
-  height: fit-content;
-}
