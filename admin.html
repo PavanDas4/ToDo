@@ -56,43 +56,88 @@
     <section class="admin-controls">
       <div class="admin-assign-task">
         <h3>assign task</h3>
-        <div class="list"></div>
-        <button>read more</button>
+        <select name="users" id="users">
+          <option value="student">students</option>
+          <option value="employee">employees</option>
+          <option value="admin">admin</option>
+        </select>
+        <div class="list">
+          <ul>
+            <li>
+              <img src="images/default-profile.svg" alt="profile">
+              <span>{{name}}</span>
+              <span>{000}</span>
+            </li>
+            <li>
+              <img src="images/default-profile.svg" alt="profile">
+              <span>{{name}}</span>
+              <span>{000}</span>
+            </li>
+            <li>
+              <img src="images/default-profile.svg" alt="profile">
+              <span>{{name}}</span>
+              <span>{000}</span>
+            </li>
+            <li>
+              <img src="images/default-profile.svg" alt="profile">
+              <span>{{name}}</span>
+              <span>{000}</span>
+            </li>
+            <li>
+              <img src="images/default-profile.svg" alt="profile">
+              <span>{{name}}</span>
+              <span>{000}</span>
+            </li>
+            <li>
+              <img src="images/default-profile.svg" alt="profile">
+              <span>{{name}}</span>
+              <span>{000}</span>
+            </li>
+            <li>
+              <img src="images/default-profile.svg" alt="profile">
+              <span>{{name}}</span>
+              <span>{000}</span>
+            </li>
+          </ul>
+        </div>
+        <button>more</button>
       </div>
       <div class="users-progress">
         <h3>progress bar</h3>
-        <label for="user-today">today</label>
-        <progress id="user-today" value="50" max="100">
-        </progress>
-        <label for="user-week">week</label>
-        <progress id="user-today" value="50" max="100">
-        </progress>
-        <label for="user-month">month</label>
-        <progress id="user-month" value="50" max="100">
-        </progress>
-        <label for="user-annual">year</label>
-        <progress id="user-year" value="50" max="100">
-        </progress>
+        <div class="data">
+          <label for="user-today">today</label>
+          <progress id="user-today" value="50" max="100">
+          </progress>
+          <label for="user-week">week</label>
+          <progress id="user-today" value="50" max="100">
+          </progress>
+          <label for="user-month">month</label>
+          <progress id="user-month" value="50" max="100">
+          </progress>
+          <label for="user-annual">annual</label>
+          <progress id="user-year" value="50" max="100">
+          </progress>
+        </div>
       </div>
       <div class="feeds">
         <h3>user feedback</h3>
         <div class="list">
           <dl>
-            <dt>user name</dt>
+            <dt>{{name}}</dt>
             <dd>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia sint doloremque, culpa eligendi laboriosam amet, enim facilis, fuga debitis nihil porro repellendus natus veniam est nostrum quae ad alias modi.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             </dd>
           </dl>
           <dl>
-            <dt>user name</dt>
+            <dt>{{name}}</dt>
             <dd>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia sint doloremque, culpa eligendi laboriosam amet, enim facilis, fuga debitis nihil porro repellendus natus veniam est nostrum quae ad alias modi.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             </dd>
           </dl>
           <dl>
-            <dt>user name</dt>
+            <dt>{{name}}</dt>
             <dd>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia sint doloremque, culpa eligendi laboriosam amet, enim facilis, fuga debitis nihil porro repellendus natus veniam est nostrum quae ad alias modi.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             </dd>
           </dl>
         </div>

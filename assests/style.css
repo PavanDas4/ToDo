@@ -2,3 +2,9 @@
   font-family: "digital-7";
   src: url(assests/digital-7.ttf) format("truetype");
 }
+*{
+  outline: auto;
+}
+.todo-header{
+  
+}
