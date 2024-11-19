@@ -1,10 +1,80 @@
 @font-face {
-  font-family: "digital-7";
-  src: url(assests/digital-7.ttf) format("truetype");
+  font-family: "DS-digital";
+  src: url('assests/DS-DIGI.ttf') format('truetype');
 }
-*{
-  outline: auto;
+
+* {
+  /* outline: auto; */
 }
-.todo-header{
-  
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.todo-header {
+  padding: 1rem;
+}
+
+.todo-header>.headings {
+  display: inline-block;
+  flex-direction: column;
+  width: max-content;
+}
+
+.todo-header>.headings>h1,
+h2 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.todo-header>.date {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-column-gap: .5rem;
+  float: right;
+}
+
+.todo-header>.date>.Date-parts-number {
+  font-size: 2rem;
+  font-weight: bold;
+  grid-row: 1/3;
+  align-self: center;
+  justify-self: center;
+}
+
+.todo-header>.date>.Date-parts-month {
+  font-weight: bold;
+  justify-self: end;
+  align-self: center;
+  text-transform: uppercase;
+}
+
+.todo-header>.date>.Date-parts-year {
+  font-weight: bold;
+  justify-self: end;
+  align-self: center;
+}
+
+.todo-nav {
+  margin: 0 1rem;
+  padding: .1rem;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.todo-nav>.section-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-nav>.section-switch>li {
+  padding: .5rem;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  text-transform: capitalize;
 }
