@@ -5,6 +5,19 @@ document.querySelector(".Date-parts-number").innerHTML = date.getDate();
 document.querySelector(".Date-parts-month").innerHTML = date.toLocaleString('default', { month: 'short' });
 document.querySelector(".Date-parts-year").innerHTML = date.getFullYear();
 
+// section switch
+let sectionSwitch = document.querySelectorAll(".section-switch>li");
+let section = document.querySelectorAll(".todo-main>section");
+for (let i = 0; i < sectionSwitch.length; i++) {
+  sectionSwitch[i].addEventListener("click", () => {
+    for (let j = 0; j < section.length; j++) {
+      section[j].style.display = "none";
+    }
+    section[i].style.display = "block";
+  });
+}
+
+
 // timer models
 let digit1 = document.querySelector(".digit1");
 let digit2 = document.querySelector(".digit2");
@@ -17,9 +30,9 @@ function play() { // start timer
   interval = setInterval(() => { // timer runs after every 1s
     if (Pomo_seconds <= 0) {
       if (Pomo_minutes <= 0) {
-        clearInterval(interval); 
+        clearInterval(interval);
       } else {
-        Pomo_minutes -= 1; 
+        Pomo_minutes -= 1;
         Pomo_seconds = 59;
       }
     } else {
@@ -32,11 +45,11 @@ function play() { // start timer
   }, 1000);
 }
 // pause timer
-function pause() { 
+function pause() {
   clearInterval(interval);
 }
 // stop timer
-function Stop() { 
+function Stop() {
   clearInterval(interval);
   Pomo_minutes = 25;
   Pomo_seconds = 0;

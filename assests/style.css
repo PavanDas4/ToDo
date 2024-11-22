@@ -1,14 +1,10 @@
-@font-face {
-  font-family: "DS-digital";
-  src: url('assests/DS-DIGI.ttf') format('truetype');
-}
 
 * {
-  /* outline: auto; */
+  outline: auto;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   margin: 0;
 }
 
@@ -77,4 +73,46 @@ h2 {
   font-weight: bold;
   position: relative;
   text-transform: capitalize;
+}
+
+.todo-main {
+  margin: 0 1rem;
+}
+
+.todo-main>.taskSection {
+  display: none;
+}
+
+.todo-main>.focusSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-main>.focusSection>h2 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.todo-main>.focusSection>.focus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.todo-main>.focusSection>.focus>.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  font-size: xx-large;
+}
+
+.todo-main>.completedSection {
+  display: none;
+}
+
+.todo-main>.profileSection {
+  display: none;
 }
