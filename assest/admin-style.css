@@ -1,16 +1,20 @@
 :root {
+  --third-color: rgb(1, 0, 70);
   --dark-bg: rgb(48, 10, 10);
   --text-white: rgb(251, 251, 251);
 }
 
 * {
   box-sizing: border-box;
-  /* outline: .1rem solid red; */
 }
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
+  background: url("assests/paint-vector.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   user-select: none;
 }
 
@@ -19,7 +23,6 @@ body::-webkit-scrollbar {
 }
 
 .loader-wrap {
-  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +30,7 @@ body::-webkit-scrollbar {
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--dark-bg);
 }
 
@@ -164,6 +167,7 @@ h2 {
 }
 
 .admin-main>.admin-controls>div {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,20 +190,23 @@ h2 {
 }
 
 .admin-main>.admin-controls>div>button {
-  width: 40%;
-  padding: .5rem;
+  position: absolute;
+  bottom: -7px;
+  width: 100%;
+  padding: .8rem;
+  font-size: large;
+  font-weight: bold;
   border: none;
   margin: .2rem 0 .4rem 0;
   border: 2px solid transparent;
-  border-radius: .4rem;
   color: var(--text-white);
-  background-color: var(--dark-bg);
+  background-color: grey;
   text-transform: capitalize;
 
   &:hover {
     cursor: pointer;
-    color: khaki;
-    border: 2px solid khaki;
+    color: var(--text-white);
+    background-color: var(--third-color);
   }
 }
 
@@ -239,7 +246,7 @@ h2 {
   flex-direction: row;
   align-items: center;
   padding: .5rem;
-  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
+  box-shadow: 0 2px 1px 0 rgb(0, 0, 0, 0.5);
   background-color: rgb(245, 245, 245);
 }
 
@@ -277,6 +284,21 @@ h2 {
   overflow-y: hidden;
 }
 
+.admin-main>.admin-controls>.feeds>.list>dl {
+  margin: .5rem;
+}
+
+.admin-main>.admin-controls>.feeds>.list>dl>dt {
+  font-weight: bold;
+}
+
+.admin-main>.admin-controls>.feeds>.list>dl>dd {
+  margin: 0;
+  font-weight: 100;
+}
+
+.admin-main>.admin-controls>.feeds>button {}
+
 .admin-footer {
   position: relative;
   bottom: 0;
@@ -300,6 +322,7 @@ h2 {
   }
 
   .admin-nav {
+    display: none !important;
     height: 100%;
     position: fixed;
     font-size: calc(50%);
@@ -315,17 +338,45 @@ h2 {
   }
 
   .admin-main>.panel-wrap {
-    justify-content: center;
     flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    font-size: calc(70%);
   }
 
   .admin-main>.panel-wrap>div {
-    width: calc(50%);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: calc(75%);
+  }
+
+  .admin-main>.panel-wrap>div>span {
+    text-align: left;
+    white-space: wrap;
+  }
+
+  .admin-main>.panel-wrap>div>span:nth-child(1) {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    width: calc(100%);
+  }
+
+  .admin-main>.panel-wrap>div>span>img {
+    padding: .1rem;
+    margin-right: 1rem;
   }
 
   .admin-main>.admin-controls {
     flex-direction: column;
     flex-wrap: nowrap;
+    margin: 1rem 0;
+    font-size: calc(80%);
+  }
+
+  .admin-main>.admin-controls>.admin-assign-task>.list>ul>li>img {
+    padding: 0;
+    margin-right: .5rem;
   }
 
   .admin-footer {

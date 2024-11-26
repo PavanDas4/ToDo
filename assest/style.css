@@ -1,10 +1,14 @@
+@font-face {
+  font-family: display;
+  src: url(assests/digitaldisplay2.ttf);
+}
 
 * {
-  outline: auto;
+  /* outline: auto; */
 }
 
 body {
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  background-image: url("assest/abstract.jpg");
   margin: 0;
 }
 
@@ -90,6 +94,7 @@ h2 {
 }
 
 .todo-main>.focusSection>h2 {
+  font-size: 4rem;
   text-align: center;
   text-transform: capitalize;
 }
@@ -105,8 +110,9 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-family: display;
+  font-size: 6rem;
   padding: 1rem;
-  font-size: xx-large;
 }
 
 .todo-main>.completedSection {
