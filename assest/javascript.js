@@ -17,6 +17,20 @@ for (let i = 0; i < sectionSwitch.length; i++) {
   });
 }
 
+// Timer fullscreen
+let focusSection = document.querySelector(".focusSection").classList;
+let fullscreen = document.querySelector(".navbuttons>span:nth-child(1)");
+let fullscreenExit = document.querySelector(".navbuttons>span:nth-child(2)");
+fullscreen.addEventListener("click", () => {
+  fullscreen.style.display = "none";
+  fullscreenExit.style.display = "block";
+  focusSection.add("full");
+});
+fullscreenExit.addEventListener("click", () => {
+  fullscreen.style.display = "block";
+  fullscreenExit.style.display = "none";
+  focusSection.remove("full");
+});
 
 // timer models
 let digit1 = document.querySelector(".digit1");
@@ -26,7 +40,12 @@ let digit5 = document.querySelector(".digit5");
 let Pomo_minutes = 25; // timer in minutes
 let Pomo_seconds = 0; // timer in seconds
 let interval = null; // timer interval
-function play() { // start timer
+let playButton = document.querySelector(".timer-button1");
+let pauseButton = document.querySelector(".timer-button2");
+let stopButton = document.querySelector(".timer-button3");
+
+// start timer
+playButton.addEventListener("click", () => {
   interval = setInterval(() => { // timer runs after every 1s
     if (Pomo_seconds <= 0) {
       if (Pomo_minutes <= 0) {
@@ -43,13 +62,17 @@ function play() { // start timer
     digit4.innerHTML = Math.floor(Pomo_seconds / 10);
     digit5.innerHTML = Pomo_seconds % 10;
   }, 1000);
-}
+  playButton.style.display = "none";
+  pauseButton.style.display = "block";
+});
 // pause timer
-function pause() {
+pauseButton.addEventListener("click", () => {
   clearInterval(interval);
-}
+  playButton.style.display = "block";
+  pauseButton.style.display = "none";
+})
 // stop timer
-function Stop() {
+stopButton.addEventListener("click", () => {
   clearInterval(interval);
   Pomo_minutes = 25;
   Pomo_seconds = 0;
@@ -57,4 +80,4 @@ function Stop() {
   digit2.innerHTML = Pomo_minutes % 10;
   digit4.innerHTML = Math.floor(Pomo_seconds / 10);
   digit5.innerHTML = Pomo_seconds % 10;
-}
+});

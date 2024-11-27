@@ -3,10 +3,6 @@
   src: url(assests/digitaldisplay2.ttf);
 }
 
-* {
-  /* outline: auto; */
-}
-
 body {
   background-image: url("assest/abstract.jpg");
   margin: 0;
@@ -81,6 +77,7 @@ h2 {
 
 .todo-main {
   margin: 0 1rem;
+  position: relative;
 }
 
 .todo-main>.taskSection {
@@ -90,7 +87,34 @@ h2 {
 .todo-main>.focusSection {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 5rem 0;
+}
+
+.todo-main>.focusSection>.navbuttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .5rem;
+}
+
+.todo-main>.focusSection>.navbuttons>span:nth-child(2) {
+  display: none;
+}
+
+.todo-main>.focusSection>.navbuttons>span>img {
+  width: 1.2rem;
+  aspect-ratio: 1;
+}
+
+.full {
+  position: fixed;
+  top: 1rem;
+  height: calc(100vh - 25vh);
+  width: calc(100% - 2rem);
+  color: whitesmoke;
+  background-color: #292929;
 }
 
 .todo-main>.focusSection>h2 {
@@ -111,8 +135,37 @@ h2 {
   flex-direction: row;
   justify-content: space-around;
   font-family: display;
-  font-size: 6rem;
+  font-size: 8rem;
   padding: 1rem;
+}
+
+.todo-main>.focusSection>.focus>.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem
+}
+
+.todo-main>.focusSection>.focus>.buttons>button {
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: blanchedalmond;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.todo-main>.focusSection>.focus>.buttons>button:nth-child(2) {
+  display: none;
+}
+
+.todo-main>.focusSection>.focus>.buttons>button>img {
+  width: 2rem;
+  aspect-ratio: 1;
 }
 
 .todo-main>.completedSection {
