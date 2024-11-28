@@ -1,9 +1,20 @@
-
 // current date update
 let date = new Date();
 document.querySelector(".Date-parts-number").innerHTML = date.getDate();
 document.querySelector(".Date-parts-month").innerHTML = date.toLocaleString('default', { month: 'short' });
 document.querySelector(".Date-parts-year").innerHTML = date.getFullYear();
+//create task
+let createTask = document.querySelector(".creates-task");
+createTask.addEventListener("click", () => {
+  let task = prompt("Enter your task");
+  if (task) {
+    let taskSection = document.querySelector(".taskSection");
+    let taskElement = document.createElement("div");
+    taskElement.classList.add("task");
+    taskElement.innerHTML = task;
+    taskSection.appendChild(taskElement);
+  }
+});
 
 // section switch
 let sectionSwitch = document.querySelectorAll(".section-switch>li");
@@ -13,7 +24,7 @@ for (let i = 0; i < sectionSwitch.length; i++) {
     for (let j = 0; j < section.length; j++) {
       section[j].style.display = "none";
     }
-    section[i].style.display = "block";
+    section[i].style.display = "flex";
   });
 }
 
