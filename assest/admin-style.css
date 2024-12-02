@@ -1,7 +1,7 @@
 :root {
-  --third-color: rgb(1, 0, 70);
-  --dark-bg: rgb(48, 10, 10);
-  --text-white: rgb(251, 251, 251);
+  --third-color: rgb(40, 0, 60);
+  --dark-bg: rgb(27, 27, 27);
+  --text-white: rgb(254, 254, 223);
 }
 
 * {
@@ -31,21 +31,25 @@ body::-webkit-scrollbar {
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  background-color: var(--dark-bg);
+  background-color: black;
 }
 
-.loader {
-  width: 120px;
-  height: 20px;
-  mask: radial-gradient(circle closest-side, #ca1616 94%, #f1272700) left/20% 100%;
-  -webkit-mask: radial-gradient(circle closest-side, #ca1616 94%, #f1272700) left/20% 100%;
-  background: linear-gradient(#fff 0 0) left/0% 100% no-repeat #000;
-  animation: l17 2s infinite steps(6);
+.loader-wrap>span{
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  animation: drop .8s ease infinite;
 }
 
-@keyframes l17 {
-  100% {
-    background-size: 120% 100%
+@keyframes drop {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
   }
 }
 
@@ -296,8 +300,6 @@ h2 {
   margin: 0;
   font-weight: 100;
 }
-
-.admin-main>.admin-controls>.feeds>button {}
 
 .admin-footer {
   position: relative;

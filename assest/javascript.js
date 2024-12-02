@@ -1,3 +1,10 @@
+setInterval(() => {
+  document.querySelector(".loader-contents>span:nth-child(2)").innerHTML = "&nbsp;Todo";
+}, 1950);
+setInterval(() => {
+  document.querySelector(".loader-wrap").style.display = "none";
+}, 4000);
+
 // current date update
 let date = new Date();
 document.querySelector(".Date-parts-number").innerHTML = date.getDate();
@@ -91,4 +98,11 @@ stopButton.addEventListener("click", () => {
   digit2.innerHTML = Pomo_minutes % 10;
   digit4.innerHTML = Math.floor(Pomo_seconds / 10);
   digit5.innerHTML = Pomo_seconds % 10;
+  playButton.style.display = "block";
+  pauseButton.style.display = "none";
 });
+
+if (Pomo_minutes == 0 && Pomo_seconds == 0) {
+  playButton.style.display = "block";
+  pauseButton.style.display = "none";
+}

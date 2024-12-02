@@ -1,9 +1,91 @@
-*{
-  /* outline: 1px solid red; */
+* {
+  user-select: none;
 }
+
 body {
-  background-image: url("assest/abstract.jpg");
+  background-image: url("image/abstract.jpg");
+  background-size: contain;
   margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.loader-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: black;
+}
+
+.loader-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.loader-contents {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+}
+
+.loader-contents>span:nth-child(2) {
+  display: inline-flex;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .5rem solid orangered;
+  animation: tpear 1.8s steps(35, end),
+    tpear 2s steps(35, end) 1.8s reverse,
+    blink 1s step-end infinite;
+}
+
+.loader {
+  width: 120px;
+  height: 20px;
+  mask: radial-gradient(circle closest-side, #ca1616 94%, #f1272700) left/20% 100%;
+  -webkit-mask: radial-gradient(circle closest-side, #ca1616 94%, #f1272700) left/20% 100%;
+  background: linear-gradient(#fff 0 0) left/0% 100% no-repeat #000;
+  animation: ball 2s infinite steps(6);
+}
+
+@keyframes ball {
+  100% {
+    background-size: 120% 100%
+  }
+}
+
+@keyframes tpear {
+  from {
+    width: 100%
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  30% {
+    border-color: rgb(255, 255, 255);
+  }
 }
 
 .todo-header {
@@ -111,8 +193,8 @@ h2 {
   top: 1rem;
   height: calc(100vh - 25vh);
   width: calc(100% - 2rem);
-  color: whitesmoke;
-  background-color: #292929;
+  color: rgb(235, 235, 235);
+  background-color: rgb(20, 20, 20);
 }
 
 .todo-main>.focusSection>h2 {
@@ -153,7 +235,7 @@ h2 {
 
   &:hover {
     cursor: pointer;
-    opacity: 0.7;
+    filter: drop-shadow(0 0 1rem rgb(255, 108, 152));
   }
 }
 
@@ -172,7 +254,7 @@ h2 {
   justify-content: center;
 }
 
-.todo-main>.completedSection>h2{
+.todo-main>.completedSection>h2 {
   font-size: 3rem;
   text-align: center;
   text-transform: capitalize;
@@ -184,7 +266,7 @@ h2 {
   background-color: aqua;
 }
 
-.todo-main>.completedSection>table>tr>td>img{
+.todo-main>.completedSection>table>tr>td>img {
   aspect-ratio: 1;
   width: 1rem;
 }
