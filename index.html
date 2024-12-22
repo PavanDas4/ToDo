@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="loader-wrap">
+  <!-- <div class="loader-wrap">
     <div class="loader-in">
       <div class="loader-contents">
         <span>just&nbsp;</span>
@@ -17,7 +17,7 @@
       </div>
       <span class="loader"></span>
     </div>
-  </div>
+  </div> -->
   <header class="todo-header">
     <div class="headings">
       <h1> todo</h1>
@@ -39,7 +39,12 @@
   </nav>
   <main class="todo-main">
     <section class="taskSection">
-      <button class="creates-task">create task</button>
+      <fieldset class="todolist">
+        <div class="todo-head">
+          <h2>todo..</h2>
+          <img src="image/add.svg" alt="add">
+        </div>
+      </fieldset>
     </section>
     <section class="focusSection">
       <div class="navbuttons">
@@ -73,17 +78,17 @@
         <tr>
           <td>{{task}}</td>
           <td>{{date}}</td>
-          <td><img src="image/delete.svg" alt="delete"></td>
+          <!-- <td><img src="image/delete.svg" alt="delete"></td> -->
         </tr>
         <tr>
           <td>{{task}}</td>
           <td>{{date}}</td>
-          <td><img src="image/delete.svg" alt="delete"></td>
+          <!-- <td><img src="image/delete.svg" alt="delete"></td> -->
         </tr>
         <tr>
           <td>{{task}}</td>
           <td>{{date}}</td>
-          <td><img src="image/delete.svg" alt="delete"></td>
+          <!-- <td><img src="image/delete.svg" alt="delete"></td> -->
         </tr>
       </table>
     </section>

@@ -1,6 +1,6 @@
 setInterval(() => {
   document.querySelector(".loader-contents>span:nth-child(2)").innerHTML = "&nbsp;Todo";
-}, 1950);
+}, 1930);
 setInterval(() => {
   document.querySelector(".loader-wrap").style.display = "none";
 }, 4000);

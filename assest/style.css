@@ -161,7 +161,44 @@ h2 {
 }
 
 .todo-main>.taskSection {
-  display: none;
+  display: flex;
+}
+
+.todo-main>.taskSection>.todolist {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border: 1px solid grey;
+  border-radius: .5rem;
+  background-color: rgb(20, 20, 20, 0.09);
+  box-shadow: 0 0 10px 1px grey inset;
+}
+
+.todo-main>.taskSection>.todolist>.todo-head {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.todo-main>.taskSection>.todolist>.todo-head>img {
+  width: 50px;
+  aspect-ratio: 1;
+}
+
+.todo-main>.taskSection>.todolist>.todo-head>h2 {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+
+  &::before {
+    content: '';
+    height: .2rem;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+  }
 }
 
 .todo-main>.focusSection {
@@ -249,7 +286,7 @@ h2 {
 }
 
 .todo-main>.completedSection {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
 }
